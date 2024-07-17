@@ -1,15 +1,17 @@
 package Function_basic_v1;
 
+import Browsers.BrowserSetup;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-public class getClear {
+public class getClear extends BrowserSetup {
     WebDriver driver;
     String driverPath = "C:\\sourcedriver\\chromedriver.exe";
-@Test
+
+    @Test
     public void clear() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", driverPath);
         driver = new ChromeDriver();
@@ -27,7 +29,6 @@ public class getClear {
         driver.quit();
 
     }
-
 
 
 }
