@@ -23,10 +23,36 @@ public class ActionsClass {
         driver.get("https://dev.poolsmobility.com/");
 
         WebElement element = driver.findElement(By.xpath("//*[@id=\"header\"]/div/div[2]/div[2]/div[1]"));
+        WebElement Shop = driver.findElement(By.xpath("//*[@id=\"header\"]/div/div[2]/div[1]/ul/li[1]/a"));
+        WebElement PoolsPhone = driver.findElement(By.xpath("//*[@id=\"header\"]/div/div[2]/div[1]/ul/li[1]/ul/li[1]/a"));
+        WebElement WhitePhonePouch = driver.findElement(By.xpath("//*[@id=\"header\"]/div/div[2]/div[1]/ul/li[1]/ul/li[2]/a"));
+        WebElement BlackPhonePouch = driver.findElement(By.xpath("//*[@id=\"header\"]/div/div[2]/div[1]/ul/li[1]/ul/li[3]/a"));
+        WebElement Adapter = driver.findElement(By.xpath("//*[@id=\"header\"]/div/div[2]/div[1]/ul/li[1]/ul/li[4]/a"));
+        WebElement Cable = driver.findElement(By.xpath("//*[@id=\"header\"]/div/div[2]/div[1]/ul/li[1]/ul/li[5]/a"));
+        WebElement Phonecase = driver.findElement(By.xpath("//*[@id=\"header\"]/div/div[2]/div[1]/ul/li[1]/ul/li[6]/a"));
 
         Actions actions = new Actions(driver);
-        actions.contextClick(element).build().perform();
-        Thread.sleep(2000);
+        actions.moveToElement(Shop).build().perform();
+        actions.click();
+        Thread.sleep(1000);
+        actions.moveToElement(PoolsPhone).build().perform();
+        actions.click();
+        Thread.sleep(1000);
+        actions.moveToElement(WhitePhonePouch).build().perform();
+        actions.click();
+        Thread.sleep(1000);
+        actions.moveToElement(BlackPhonePouch).build().perform();
+        actions.click();
+        Thread.sleep(1000);
+        actions.moveToElement(Adapter).build().perform();
+        actions.click();
+        Thread.sleep(1000);
+        actions.moveToElement(Cable).build().perform();
+        actions.click();
+        Thread.sleep(1000);
+        actions.moveToElement(Phonecase).build().perform();
+        actions.click();
+        Thread.sleep(1000);
         driver.quit();
 
     }
