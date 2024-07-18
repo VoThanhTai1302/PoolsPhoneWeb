@@ -7,7 +7,6 @@ public class PersonManager {
     private List<Person> person;
 
     public PersonManager() {
-
         this.person = new ArrayList<>();
     }
 

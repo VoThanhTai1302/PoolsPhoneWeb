@@ -41,7 +41,7 @@ public class HomePage {
     }
 
 
-    public void moveToElementHeader() throws InterruptedException {
+    public boolean moveToElementHeader() throws InterruptedException {
         //Khởi tạo và click Logo để refresh page
         WebElement clicklogo = driver.findElement(logo);
         clicklogo.click();
@@ -99,6 +99,7 @@ public class HomePage {
         actions.moveToElement(elementSignIn).build().perform();
         Thread.sleep(1000);
 
+        return false;
     }
 
 
